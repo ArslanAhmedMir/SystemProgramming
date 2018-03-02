@@ -1,0 +1,33 @@
+#!/bin/sh
+
+
+#if no command line arguments given
+if [ $*!=0 ]
+then
+	read var1 var2
+	
+	echo "Addittion : `expr $var1 + $var2`"
+
+        if [ $?!=0 ]
+	then
+	echo "valid arguments"
+	fi
+	
+	echo "Subtraction : `expr $var1 - $var2`"
+        echo "MUltiplication : `expr $var1 \* $var2`"	
+	echo "Division : `expr $var1 / $var2`"
+        	  
+echo "here"	
+else        
+	echo "Addittion : `expr $1 + $2`"
+        if [ $?!=0 ]
+	then
+	echo "valid arguments"
+	fi
+	
+	echo "Subtraction : `expr $1 - $2`"
+        echo "MUltiplication : `expr $1 \* $2`"	
+	echo "Division : `expr $1 / $2`"
+		
+
+fi
